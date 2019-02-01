@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".BuscarProd">
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Buscar Producto"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
+
+   <RadioGroup
+       android:id="@+id/buscar_radioGroup"
+       android:layout_marginTop="10dp"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal"
+       android:gravity="center_horizontal">
+
+       <RadioButton
+           android:id="@+id/buscar_radio_user"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Por usuario"/>
+
+       <RadioButton
+           android:id="@+id/buscar_radio_categoria"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Por categoría"/>
+   </RadioGroup>
+
+    <Spinner
+        android:layout_marginTop="10dp"
+        android:id="@+id/buscar_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></Spinner>
+
+    <EditText
+        android:layout_marginTop="10dp"
+        android:id="@+id/buscar_et_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Usuario "/>
+
+    <Button
+        android:layout_marginTop="30dp"
+        android:id="@+id/buscar_btn_buscar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Buscar"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/buscar_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </android.support.v7.widget.RecyclerView>
+</LinearLayout>
